@@ -1,0 +1,159 @@
+Pastry Bonus:
+Name:                    UFID:       
+Rahul Nyayapathi      - 03819264  
+Soham Talukdar        - 38975097  
+
+We implemented the failure case. 
+Nodes are being killed.
+Some connections are temporarily being disabled and some connections are dying permanently.
+When a node loses connection to another node permanently that connection is forwarded to the next connection, 
+i.e., the next time a node uses the permanently dead connection, it goes to the next connection.
+The failure code runs normally without killing nodes until we pass a third argument "failure" along with number of nodes and number or requests.
+
+Sample input:
+
+25 5 failure
+
+output:
+
+node bddaac19 received message 5, through the path is null,0 hop(s) took place 
+node bddaac19 received message 1, through the path is d24c5cc6,1 hop(s) took place 
+(ff130f33) temporarily fails connectted with (bddaac19) 
+(ff130f33) temporarily fails connectted with (bddaac19) 
+node 5f21466a received message 1, through the path is null,0 hop(s) took place 
+node 5f21466a received message 3, through the path is aeabf568,1 hop(s) took place 
+node 10bd39a4 received message 2, through the path is 5f21466a,1 hop(s) took place 
+node aeabf568 received message 3, through the path is 5f21466a,1 hop(s) took place 
+node 02d10270 received message 5, through the path is null,0 hop(s) took place 
+node 02d10270 received message 3, through the path is 10bd39a4,1 hop(s) took place 
+node 19e53a25 received message 4, through the path is null,0 hop(s) took place 
+node eaef829b received message 5, through the path is null,0 hop(s) took place 
+node 9e34529f received message 1, through the path is null,0 hop(s) took place 
+node 77bb2b61 received message 3, through the path is 19e53a25,1 hop(s) took place 
+node 77bb2b61 received message 5, through the path is f1db2a29,1 hop(s) took place 
+node 10bd39a4 received message 1, through the path is 83b4395c,1 hop(s) took place 
+node 10bd39a4 received message 3, through the path is 83b4395c,1 hop(s) took place 
+node 88fdc0ec received message 3, through the path is 83b4395c,1 hop(s) took place 
+node 88fdc0ec received message 5, through the path is 83b4395c,1 hop(s) took place 
+node 02d10270 received message 4, through the path is 67dac45a,1 hop(s) took place 
+node 02d10270 received message 2, through the path is eaef829b+eea0829d,2 hop(s) took place 
+node 19e53a25 received message 1, through the path is f1db2a29,1 hop(s) took place 
+node 19e53a25 received message 5, through the path is 67dac45a,1 hop(s) took place 
+ Connection dies temporarily: Node (02132cc3)<->N (02132cc3)
+node bddaac19 received message 4, through the path is aeabf568,1 hop(s) took place 
+node 67dac45a received message 5, through the path is 88fdc0ec,1 hop(s) took place 
+node 67dac45a received message 1, through the path is 3b97602e,1 hop(s) took place 
+node 02132cc3 received message 5, through the path is null,0 hop(s) took place 
+Node dies: N24(19e53a25)
+
+node 02132cc3 received message 1, through the path is 09ce777c,1 hop(s) took place 
+node d24c5cc6 received message 2, through the path is eaef829b,1 hop(s) took place 
+node 9e34529f received message 3, through the path is 77bb2b61,1 hop(s) took place 
+node ed36da51 received message 2, through the path is 988f5ed4,1 hop(s) took place 
+node 9e34529f received message 5, through the path is 77bb2b61,1 hop(s) took place 
+node ed36da51 received message 1, through the path is bddaac19,1 hop(s) took place 
+node aeabf568 received message 5, through the path is 72eb6a33,1 hop(s) took place 
+node 09ce777c received message 5, through the path is 5f21466a,1 hop(s) took place 
+node 77bb2b61 received message 1, through the path is 988f5ed4,1 hop(s) took place 
+node aeabf568 received message 1, through the path is 77bb2b61,1 hop(s) took place 
+node eaef829b received message 2, through the path is 5f21466a,1 hop(s) took place 
+node ff130f33 received message 3, through the path is 72eb6a33+77bb2b61,2 hop(s) took place 
+node eaef829b received message 3, through the path is 72eb6a33+77bb2b61,2 hop(s) took place 
+node ff130f33 received message 1, through the path is 10bd39a4+19e53a25,2 hop(s) took place 
+node 5f21466a received message 5, through the path is b2489b20+bddaac19,2 hop(s) took place 
+(ff130f33) temporarily fails connectted with (bddaac19) 
+node 5f21466a received message 2, through the path is d24c5cc6,1 hop(s) took place 
+node aeabf568 received message 2, through the path is 67dac45a,1 hop(s) took place 
+node 09ce777c received message 3, through the path is f1db2a29+ff130f33,2 hop(s) took place 
+(ff130f33) permanently fails connectted with (bddaac19) !
+use (d24c5cc6) to replace bddaac19
+node 09ce777c received message 2, through the path is aeabf568+9e34529f,2 hop(s) took place 
+node 88fdc0ec received message 1, through the path is 5f21466a,1 hop(s) took place 
+node 988f5ed4 received message 3, through the path is 72eb6a33,1 hop(s) took place 
+node 88fdc0ec received message 4, through the path is aeabf568,1 hop(s) took place 
+node 988f5ed4 received message 5, through the path is eaef829b,1 hop(s) took place 
+node 02132cc3 received message 3, through the path is 988f5ed4,1 hop(s) took place 
+node 988f5ed4 received message 2, through the path is 5f21466a,1 hop(s) took place 
+node 988f5ed4 received message 4, through the path is 88fdc0ec,1 hop(s) took place 
+node 19e53a25 received message 3, through the path is 5f21466a,1 hop(s) took place 
+node ed36da51 received message 4, through the path is 3b97602e,1 hop(s) took place 
+node ed36da51 received message 5, through the path is 3b97602e,1 hop(s) took place 
+node bddaac19 received message 3, through the path is 988f5ed4,1 hop(s) took place 
+node bddaac19 received message 2, through the path is 3b97602e,1 hop(s) took place 
+node 77bb2b61 received message 2, through the path is 3b97602e,1 hop(s) took place 
+node 67dac45a received message 4, through the path is 3b97602e,1 hop(s) took place 
+node 02132cc3 received message 2, through the path is 3b97602e,1 hop(s) took place 
+node 02132cc3 received message 4, through the path is 3b97602e,1 hop(s) took place 
+node eea0829d received message 5, through the path is eaef829b,1 hop(s) took place 
+node eea0829d received message 3, through the path is 9e34529f,1 hop(s) took place 
+node eea0829d received message 1, through the path is 5f21466a,1 hop(s) took place 
+node eea0829d received message 2, through the path is bddaac19,1 hop(s) took place 
+node eea0829d received message 4, through the path is bddaac19,1 hop(s) took place 
+node 3b97602e received message 1, through the path is null,0 hop(s) took place 
+node 3b97602e received message 3, through the path is null,0 hop(s) took place 
+node 10bd39a4 received message 4, through the path is d24c5cc6,1 hop(s) took place 
+node 10bd39a4 received message 5, through the path is 5f21466a,1 hop(s) took place 
+node f1db2a29 received message 5, through the path is eaef829b,1 hop(s) took place 
+node 72eb6a33 received message 4, through the path is d24c5cc6,1 hop(s) took place 
+node 72eb6a33 received message 2, through the path is aeabf568,1 hop(s) took place 
+node f1db2a29 received message 1, through the path is 72eb6a33,1 hop(s) took place 
+node 72eb6a33 received message 1, through the path is 3b97602e,1 hop(s) took place 
+node 72eb6a33 received message 3, through the path is 3b97602e,1 hop(s) took place 
+node f1db2a29 received message 2, through the path is 3b97602e,1 hop(s) took place 
+node 72eb6a33 received message 5, through the path is 3b97602e,1 hop(s) took place 
+node f1db2a29 received message 4, through the path is 3b97602e,1 hop(s) took place 
+node 83b4395c received message 4, through the path is 77bb2b61,1 hop(s) took place 
+node d24c5cc6 received message 1, through the path is f1db2a29,1 hop(s) took place 
+node 83b4395c received message 2, through the path is 5f21466a,1 hop(s) took place 
+node 83b4395c received message 1, through the path is bddaac19,1 hop(s) took place 
+node eaef829b received message 1, through the path is d24c5cc6,1 hop(s) took place 
+node 67dac45a received message 2, through the path is d24c5cc6,1 hop(s) took place 
+node 988f5ed4 received message 1, through the path is d24c5cc6,1 hop(s) took place 
+node 5f21466a received message 4, through the path is d24c5cc6,1 hop(s) took place 
+node d24c5cc6 received message 4, through the path is 02132cc3+09ce777c,2 hop(s) took place 
+node d24c5cc6 received message 3, through the path is 3b97602e+19e53a25,2 hop(s) took place 
+node 9e34529f received message 4, through the path is 3b97602e,1 hop(s) took place 
+node aeabf568 received message 4, through the path is 3b97602e+19e53a25,2 hop(s) took place 
+node 9e34529f received message 2, through the path is d24c5cc6,1 hop(s) took place 
+node 83b4395c received message 3, through the path is bddaac19,1 hop(s) took place 
+node 83b4395c received message 5, through the path is f1db2a29+ff130f33,2 hop(s) took place 
+node 19e53a25 received message 2, through the path is aeabf568+9e34529f,2 hop(s) took place 
+node 3b97602e received message 4, through the path is 988f5ed4+9e34529f,2 hop(s) took place 
+node 3b97602e received message 2, through the path is eaef829b+ed36da51,2 hop(s) took place 
+(ff130f33) permanently fails connectted with (bddaac19) !
+use (b2489b20) to replace bddaac19
+node ff130f33 received message 5, through the path is ff130f33+bddaac19,2 hop(s) took place 
+node ff130f33 received message 4, through the path is ff130f33+ff130f33+bddaac19,3 hop(s) took place 
+node ff130f33 received message 2, through the path is 60ca6d49,1 hop(s) took place 
+node d24c5cc6 received message 5, through the path is 60ca6d49,1 hop(s) took place 
+node 67dac45a received message 3, through the path is 60ca6d49,1 hop(s) took place 
+node 60ca6d49 received message 1, through the path is 5f21466a,1 hop(s) took place 
+node 60ca6d49 received message 2, through the path is 3b97602e,1 hop(s) took place 
+node ed36da51 received message 3, through the path is b2489b20,1 hop(s) took place 
+node 60ca6d49 received message 3, through the path is 88fdc0ec,1 hop(s) took place 
+node 60ca6d49 received message 4, through the path is f1db2a29+ff130f33,2 hop(s) took place 
+node 88fdc0ec received message 2, through the path is b2489b20,1 hop(s) took place 
+node 60ca6d49 received message 5, through the path is aeabf568,1 hop(s) took place 
+node 77bb2b61 received message 4, through the path is b2489b20,1 hop(s) took place 
+node eaef829b received message 4, through the path is b2489b20,1 hop(s) took place 
+node f1db2a29 received message 3, through the path is b2489b20,1 hop(s) took place 
+node b2489b20 received message 1, through the path is bddaac19,1 hop(s) took place 
+node b2489b20 received message 2, through the path is 5f21466a,1 hop(s) took place 
+node b2489b20 received message 4, through the path is d24c5cc6,1 hop(s) took place 
+node b2489b20 received message 5, through the path is 3b97602e,1 hop(s) took place 
+node 09ce777c received message 1, through the path is b2489b20+bddaac19,2 hop(s) took place 
+node 09ce777c received message 4, through the path is b2489b20+bddaac19,2 hop(s) took place 
+node 3b97602e received message 5, through the path is b2489b20,1 hop(s) took place 
+(10bd39a4) temporarily fails connectted with (19e53a25) 
+(10bd39a4) temporarily fails connectted with (19e53a25) 
+(10bd39a4) temporarily fails connectted with (19e53a25) 
+(10bd39a4) permanently fails connectted with (19e53a25) !
+use (3b97602e) to replace 19e53a25
+node b2489b20 received message 3, through the path is 10bd39a4+10bd39a4+10bd39a4+10bd39a4+19e53a25,5 hop(s) took place 
+node 02d10270 received message 1, through the path is 0a33337a,1 hop(s) took place 
+node 0a33337a received message 1, through the path is 988f5ed4+9e34529f,2 hop(s) took place 
+node 0a33337a received message 2, through the path is b2489b20,1 hop(s) took place 
+node 0a33337a received message 3, through the path is 02132cc3,1 hop(s) took place 
+node 0a33337a received message 4, through the path is b2489b20+bddaac19,2 hop(s) took place 
+node 0a33337a received message 5, through the path is 02d10270,1 hop(s) took place 
+the whole network's average hops is :1.136
